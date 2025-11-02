@@ -1,0 +1,14 @@
+fastmcp
+pandas
+pydantic
+python-dotenv
+httpx
+google-api-python-client
+google-auth
+google-auth-oauthlib
+OpenDartReader
+pytz
+cryptography
+beartype
+uv
+requests
