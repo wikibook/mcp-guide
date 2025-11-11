@@ -1,12 +1,51 @@
+# MCP 실전활용 & 서버개발 핵심 가이드
+![대체 텍스트](https://image.yes24.com/goods/162224477/L)
+
+이 저장소는 『MCP 실전활용 & 서버개발 핵심 가이드』 도서의 내용을 바탕으로 MCP(Model Context Protocol) 서버의 환경을 설정하고 사용하는 핵심 방법을 담고 있습니다. 환경 설정부터 실제 서버 사용법에 이르기까지, 개발이 완료된 MCP 서버를 활용하는 전체 과정은 아래의 가이드 영상을 통해 상세히 확인하실 수 있습니다.
+
+
+### 구매처
+- Yes24: https://www.yes24.com/product/goods/162224477
+- 교보문고 : https://product.kyobobook.co.kr/detail/S000218318818
+- 알라딘 : https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=375653043
+
+## 🎥 유튜브 가이드
+
+[![MCP 실전활용 & 서버개발 책 소개](https://img.youtube.com/vi/vHslwhBUjgQ/0.jpg)](https://www.youtube.com/watch?v=vHslwhBUjgQ "Video Title")
+
+### 1. [MCP 서버 환경 설정](https://www.youtube.com/watch?v=QIiTH475CF0)  
+MCP 서버 프로젝트를 시작하기 위한 기본 환경을 구축하는 방법입니다. Python 가상 환경 설정, 필수 라이브러리 설치, MCP 서버 코드 Clone 부터 Fast MCP 설치까지 단계별 안내를 제공합니다.
+
+---
+
+### 2. [MCP 서버로 데이터 분석하기](https://www.youtube.com/watch?v=6xyuSIyKd30&t=62s)  
+Pandas라이브러리를 활용하여 개발된 MCP 서버를 활용해 로컬에 저장되어있는 데이터를 분석하는 방법을 안내합니다. 
+
+---
+
+### 3. [구글 비서 MCP서버를 이용하기](https://www.youtube.com/watch?v=Q1N3qPSmNZ8&t=178s)  
+구글의 API를 이용하여 개발되어진 MCP 서버를 활용하는 방법을 소개하며, 구글의 캘린더와 이메일을 통합해 MCP로 사용하는 방법을 안내합니다. 
+
+---
+
+### 4. [전자 공시 시스템 MCP서버를 이용하여 기업 분석하기](https://studio.youtube.com/video/O1T8GOxzqMg/edit)  
+전자 공시 시스템의 데이터를 활용하는 MCP 서버로, 기업의 공시 정보를 수집하고 분석하는 방법을 설명합니다.
+
+---
+
+### 5. [주식 MCP서버를 이용하여 매수 및 조회 하기](https://www.youtube.com/watch?v=PUHksPA1TbI)  
+주식 거래 API와 연동한 MCP 서버 구축 예제로, 주식 매수 및 잔고 조회 기능을 MCP 서버로 사용하는 사례를 다룹니다. 
+
+
 # 🧑‍💻 FastMCP 설치 가이드
 
-### **FastMCP `install` 명령어 사용법 변경 (버전 2.10.3 기준)**
+## **FastMCP `install` 명령어 사용법 변경 (버전 2.10.3 기준)**
 
 FastMCP 버전 **2.10.3**을 기준으로 서버 설치 명령어의 형식이 변경되었습니다.
 
 -----
 
-#### 1️⃣ 버전 2.10.3 이전: 클라이언트 이름 생략 가능
+### 1️⃣ 버전 2.10.3 이전: 클라이언트 이름 생략 가능
 
   * **명령어 형식:** `fastmcp install <파일 이름>`
 
@@ -20,7 +59,7 @@ FastMCP 버전 **2.10.3**을 기준으로 서버 설치 명령어의 형식이 �
 
 -----
 
-#### 2️⃣ 버전 2.10.3 이후: 클라이언트 이름 명시 필수
+### 2️⃣ 버전 2.10.3 이후: 클라이언트 이름 명시 필수
 
   * **명령어 형식:** `fastmcp install <클라이언트 이름> <파일 이름>`
 
@@ -36,11 +75,11 @@ FastMCP 버전 **2.10.3**을 기준으로 서버 설치 명령어의 형식이 �
 
 -----
 
-### **FastMCP 환경 설정 및 설치 워크플로우**
+## **FastMCP 환경 설정 및 설치 워크플로우**
 
 FastMCP 서버를 설치하고 실행하기 위한 기본적인 워크플로우입니다.
 
-#### 1\. 🐍 파이썬 설치 및 확인
+### 1\. 🐍 파이썬 설치 및 확인
 
   * **필수:** 파이썬이 시스템에 우선적으로 설치되어 있어야 합니다.
   * **확인:** 터미널 또는 명령 프롬프트에서 아래 명령어를 입력하여 설치 및 버전을 확인하세요.
@@ -48,14 +87,14 @@ FastMCP 서버를 설치하고 실행하기 위한 기본적인 워크플로우�
     python --version
     ```
 
-#### 2\. 📦 필요한 라이브러리 설치 (로컬 터미널에서 이용)
+### 2\. 📦 필요한 라이브러리 설치 (로컬 터미널에서 이용)
 
   * `requirements.txt` 파일이 있는 폴더에 접근하여 필요한 라이브러리를 설치합니다.
     ```bash
     python -m pip install -r requirements.txt
     ```
 
-#### 3\. 🛡️ 가상 환경(Virtual Environment) 세팅
+### 3\. 🛡️ 가상 환경(Virtual Environment) 세팅
 
   * **가상 환경 생성:** 프로젝트 폴더 내에 `venv`라는 이름의 가상 환경을 생성합니다.
     ```bash
@@ -71,7 +110,7 @@ FastMCP 서버를 설치하고 실행하기 위한 기본적인 워크플로우�
     pip install fastmcp
     ```
 
-#### 4\. ⚙️ MCP 서버 설치
+### 4\. ⚙️ MCP 서버 설치
 
   * 각 MCP 서버 파일을 설치할 때, 아래와 같은 명령어로 설치를 완료합니다.
     ```bash
